@@ -6,4 +6,4 @@ parser.add_argument("--model_checkpoint", help="specify checkpoint file", requir
 args = parser.parse_args()
 
 for var in tf.contrib.framework.list_variables(args.model_checkpoint):
-    print(var[0])
+    print(var[0],var[1])
