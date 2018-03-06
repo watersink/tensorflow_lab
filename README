@@ -1,6 +1,6 @@
 #TensorFlow Library:
 
-##checkpoint_explore：
-解析.ckpt模型中的参数
+##checkpoint_explore
+explore the checkpoint's parameter's name and shape
 useage:
     python checkpoint_explore.py --model_checkpoint *.ckpt-*
