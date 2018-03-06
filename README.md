@@ -2,5 +2,5 @@
 
 ## checkpoint_explore
 explore the checkpoint's parameter's name and shape
-useage:
+### useage:
     python checkpoint_explore.py --model_checkpoint *.ckpt-*
