@@ -15,4 +15,5 @@ train the the other parts of the whole model
 
 ## pb_graph_explore
 explore pb's parameter's name
+### useage:
     python pb_graph_explore.py
