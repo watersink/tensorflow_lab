@@ -17,3 +17,9 @@ train the the other parts of the whole model
 explore pb's parameter's name
 ### useage:
     python pb_graph_explore.py
+
+## import_pb_to_tensorboard
+load pb's graph to tensorboard,only use a .pb file
+### useage:
+    python import_pb_to_tensorboard.py --model_dir=./froze_graph.pb --log_dir=./log
+    tensorboard --logdir=./log
