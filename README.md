@@ -23,3 +23,6 @@ load pb's graph to tensorboard,only use a .pb file
 ### useage:
     python import_pb_to_tensorboard.py --model_dir=./froze_graph.pb --log_dir=./log
     tensorboard --logdir=./log
+
+## finetune_import_arbitrarily_op_with_tf
+finetune with offical model,and changed class num,so the model shape is different,this code can help import arbitrarily op.
