@@ -26,3 +26,12 @@ load pb's graph to tensorboard,only use a .pb file
 
 ## finetune_import_arbitrarily_op_with_tf
 finetune with offical model,and changed class num,so the model shape is different,this code can help import arbitrarily op.
+
+## caffe_optimise_quantize
+change caffe_root to  your dir where installed caffe
+
+    python3 merge_bn_scale_droupout.py --model deploy.prototxt --weights yolov3.caffemodel --output_model deploy_mergebn.prototxt --output_weights yolov3_mergebn.caffemodel
+    python3 caffe-int8-convert-tool-dev-weight.py --proto=deploy_mergebn.prototxt --model=yolov3_mergebn.caffemodel --mean 127.5 127.5 127.5 --norm=0.007843 --images=./testimgs/ --output=yolov3.table
+    caffe2ncnn deploy_mergebn.prototxt yolov3_mergebn.caffemodel yolov3_int8.param yolov3_int8.bin 256 yolov3.table
+    
+then use the .param and .bin as usual,ncnn can rec int8 mode auto.
